@@ -1,0 +1,10 @@
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\bin\Debug\TeamRandomizer.exe.config
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\bin\Debug\TeamRandomizer.exe
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\bin\Debug\TeamRandomizer.pdb
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.csproj.AssemblyReference.cache
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.Form1.resources
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.Properties.Resources.resources
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.csproj.GenerateResource.cache
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.csproj.CoreCompileInputs.cache
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.exe
+C:\Users\46705\OneDrive\Documents\Visual Studio\Annat\TeamRandomizer\TeamRandomizer\obj\Debug\TeamRandomizer.pdb
