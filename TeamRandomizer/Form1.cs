@@ -13,10 +13,10 @@ namespace TeamRandomizer
     public partial class Form1 : Form
     {
         // METHODS
-        
+
 
         // VARIABLES
-        
+        List<string> names = new List<string>();
         
         // CODE START
 
