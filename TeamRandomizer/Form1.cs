@@ -14,11 +14,9 @@ namespace TeamRandomizer
     {
         // METHODS
         
-        
 
         // VARIABLES
         
-        List<string> names = new List<string>();
         
         // CODE START
 
