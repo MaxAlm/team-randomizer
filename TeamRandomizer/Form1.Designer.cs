@@ -31,6 +31,8 @@ namespace TeamRandomizer
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button_randomize = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxTeams = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -46,16 +48,34 @@ namespace TeamRandomizer
             this.button_randomize.Location = new System.Drawing.Point(263, 616);
             this.button_randomize.Name = "button_randomize";
             this.button_randomize.Size = new System.Drawing.Size(137, 39);
-            this.button_randomize.TabIndex = 1;
+            this.button_randomize.TabIndex = 2;
             this.button_randomize.Text = "Randomize";
             this.button_randomize.UseVisualStyleBackColor = true;
             this.button_randomize.Click += new System.EventHandler(this.button_randomize_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 594);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nr. of teams";
+            // 
+            // txtBoxTeams
+            // 
+            this.txtBoxTeams.Location = new System.Drawing.Point(12, 624);
+            this.txtBoxTeams.Name = "txtBoxTeams";
+            this.txtBoxTeams.Size = new System.Drawing.Size(100, 31);
+            this.txtBoxTeams.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 682);
+            this.Controls.Add(this.txtBoxTeams);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_randomize);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -65,6 +85,7 @@ namespace TeamRandomizer
             this.Text = "Team Randomizer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -72,6 +93,8 @@ namespace TeamRandomizer
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button_randomize;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxTeams;
     }
 }
 
