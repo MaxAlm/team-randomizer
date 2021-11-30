@@ -12,10 +12,8 @@ namespace TeamRandomizer
 {
     public partial class Form1 : Form
     {
-        // METHODS
-
-
         // VARIABLES
+
         List<string> names = new List<string>();
         Random rnd = new Random();
         
@@ -33,27 +31,22 @@ namespace TeamRandomizer
 
         private void button_randomize_Click(object sender, EventArgs e)
         {
-            // Clear names list
             names.Clear();
 
+            // If textBox is readonly...
             if (richTextBox1.ReadOnly == true)
             {
-                // Make textbox not readonly
                 richTextBox1.Text = "";
                 richTextBox1.ReadOnly = false;
                 richTextBox1.BackColor = Color.White;
 
-                // Make txtBoxTeams not readonly
                 txtBoxTeams.ReadOnly = false;
 
-                // Change button text
                 button_randomize.Text = "Randomize";
             }
             else
             {
                 int teams; // Stores amount of teams.
-
-                // Get names from textbox
                 string[] lines = richTextBox1.Text.Split('\n');
 
                 // Filter out empty rows
@@ -89,22 +82,22 @@ namespace TeamRandomizer
                     return;
                 }
 
-                // Create teams array
-                List<string>[] teamArray = new List<string>[teams];
+                Queue<string>[] teamArray = new Queue<string>[teams];
 
                 // Randomize teams
                 while (names.Count > 0)
                 {
                     for (int i = 0; i < teamArray.Length; i++)
                     {
-                        // Get random 'names' index
+                        if (names.Count == 0)
+                            break;
+
+                        if (teamArray[i] == null)
+                            teamArray[i] = new Queue<string>();
+
                         int num = rnd.Next(0, names.Count);
 
-                        // Check if list exist. If not, add list
-                        if (teamArray[i] == null) teamArray[i] = new List<string>();
-
-                        // Add name to team
-                        teamArray[i].Add(names[num]);
+                        teamArray[i].Enqueue(names[num]);
                         names.RemoveAt(num);
                     }
                 }
@@ -118,12 +111,14 @@ namespace TeamRandomizer
                 {
                     richTextBox1.Text += String.Format("=== TEAM {0} ==={1}", i + 1, Environment.NewLine);
 
-                    for (int j = 0; j < teamArray[i].Count; j++)
+                    while (teamArray[i].Count != 0)
                     {
-                        richTextBox1.Text += teamArray[i][j] + Environment.NewLine;
+                        richTextBox1.Text += teamArray[i].Dequeue() + Environment.NewLine;
                     }
 
-                    richTextBox1.Text += Environment.NewLine;
+                    // If not last team
+                    if (i != teamArray.Length - 1)
+                        richTextBox1.Text += Environment.NewLine;
                 }
 
                 // Change button text and make textboxes readonly
